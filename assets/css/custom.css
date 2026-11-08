@@ -1,0 +1,162 @@
+/* =========================================
+   1. Colour palette
+   Edit the values; leave the names alone.
+   ========================================= */
+:root {
+  /* Dark mode (your site's default) */
+  --surface-1-dark: #282224;   /* page background */
+  --surface-2-dark: #282224;   /* panels, loading placeholders */
+  --text-1-dark:    #fafafa;   /* titles, main text */
+  --text-2-dark:    #a3a3a3;   /* subtitles, photo counts */
+  --border-dark:    #888b90;   /* lines and outlines */
+
+  /* Light mode (any album set to theme: light) */
+  --surface-1-light: #fffff4;
+  --surface-2-light: #fffff4;
+  --text-1-light:    #0c090a;
+  --text-2-light:    #888b90;
+  --border-light:    #bbb;
+}
+
+/* =========================================
+   2. Fonts
+   ========================================= */
+
+/* 2a. Font files */
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("../fonts/SourceSerif4-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("../fonts/SourceSerif4-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("../fonts/SourceSerif4-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 2b. Font settings: change these to tune the whole site */
+:root {
+  --font-body:    "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-heading: var(--font-body);
+
+  --weight-body:    400;
+  --weight-heading: 600;
+
+  --base-size:     87.5%;    /* 14px; the browser default is 100% (16px) */
+  --leading:       1.4;      /* line spacing for body text */
+  --leading-tight: 1.1;      /* line spacing for headings */
+  --tracking:      -0.01em;  /* letter spacing for headings; negative = tighter */
+}
+
+/* 2c. Apply the settings */
+html {
+  font-size: var(--base-size);
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: var(--weight-body);
+  line-height: var(--leading);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: var(--weight-heading);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking);
+}
+
+/* =========================================
+   3. Text styles
+   Find each selector with right-click > Inspect
+   ========================================= */
+/* =========================================
+   3. Text styles
+   ========================================= */
+
+/* 3a. Page titles: album pages, Disclaimers, Contact */
+h1 {
+  font-size: 1.25rem !important;   /* try between 1rem and 1.5rem */
+}
+footer {
+  font-size: 0.75rem !important; 
+}
+.centered {
+  text-align: center;
+}
+/* =========================================
+   4. Layout tweaks
+   ========================================= */
+
+/* 4a. Top menu: bold, smaller, evenly spaced across the page */
+:root {
+  --page-gutter: 1.7rem;   /* side spacing to match the gallery; tune if needed */
+}
+
+.topnav {
+  flex: 1;
+  width: 100%;
+  padding-left: var(--page-gutter);
+  padding-right: var(--page-gutter);
+  box-sizing: border-box;   /* keeps the padding inside the width, so no sideways scrolling */
+}
+.topnav ul {
+  display: flex;
+  justify-content: space-between;   /* first item at the left edge, last at the right, equal gaps between */
+  align-items: baseline;
+  flex-wrap: wrap;                  /* lets items wrap on very narrow screens */
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.topnav li {
+  display: block;   /* overrides any theme styling on header list items */
+}
+
+.topnav a {
+  display: inline-block;
+  color: var(--text-1);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.7rem;      /* smaller; raise toward 1rem for bigger */
+  font-weight: 900;        /* bold: matches your SemiBold font file */
+  letter-spacing: 0.06em;  /* a little air between capitals */
+}
+
+.topnav a:hover {
+  color: var(--text-2);
+}
+
+/* 4b. Album labels: line up with the left edge of the cover image.
+   Replace .ALBUM-LABEL with the selector you find (see the steps below). */
+/* 4b. Album labels: line up with the left edge of the cover image */
+a:has(img) :has(> h2) {
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+
+/* 4c. Album list: hide the photo count */
+a:has(img) h2 + p {
+  display: none;
+}
+
+/* 4d. Album list: smaller album titles */
+a:has(img) h2 {
+  font-size: 0.8rem !important;   /* try between 0.9rem and 1.2rem */
+}

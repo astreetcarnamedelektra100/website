@@ -1,18 +1,22 @@
-# Build and Release Folders
-bin-debug/
-bin-release/
-[Oo]bj/
-[Bb]in/
+# Hugo build output
+/public/
+/resources/_gen/
+.hugo_build.lock
 
-# Other files and folders
-.settings/
+# Keys and secrets
+*.pem
+*.key id_ed25519*
+.env
+# RAW and original files
+*.CR2
+*.CR3
+*.NEF
+*.ARW
+*.DNG
+*.RAF
+*.psd
+*.tif
+*.tiff
+# Windows clutter Thumbs.db
+desktop.ini
 
-# Executables
-*.swf
-*.air
-*.ipa
-*.apk
-
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.

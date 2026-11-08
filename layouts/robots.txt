@@ -1,0 +1,15 @@
+# AI training and dataset crawlers: rights reserved (EU DSM Directive Art. 4(3))
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: anthropic-ai
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: meta-externalagent
+User-agent: CCBot
+User-agent: Bytespider
+User-agent: PerplexityBot
+Disallow: /
+
+# Everyone else, including search engines
+User-agent: *
+Allow: /

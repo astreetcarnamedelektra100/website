@@ -1,0 +1,43 @@
+baseURL = "https://astreetcarnamedelektra100.github.io/website/"
+copyright = "© Sachin Dubey 2026"
+locale = "en-US"
+title = "SACHIN DUBEY"
+theme = "gallery"
+defaultContentLanguage = "en"
+disableKinds = ["taxonomy"]
+enableRobotsTXT = true
+timeout = "120s"
+
+[params]
+  defaultTheme = "light"
+  [params.gallery]
+    #boxSpacing = 10
+    #targetRowHeight = 288
+    #targetRowHeightTolerance = 0.25
+
+[imaging]
+  resampleFilter = "CatmullRom"
+  [imaging.jpeg]
+    quality = 85
+  [imaging.exif]
+    disableLatLong = true
+
+[caches]
+  [caches.images]
+    dir = ":cacheDir/images"
+
+[menus]
+  [[menus.top]]
+    name = "SACHIN DUBEY"
+    pageRef = "/"
+    weight = 10
+  [[menus.top]]
+    name = "CONTACT"
+    pageRef = "/contact"
+    weight = 20
+  [[menus.top]]
+    name = "DISCLAIMERS"
+    pageRef = "/disclaimers"
+    weight = 30
+[markup.goldmark.parser.attribute]
+  block = true
