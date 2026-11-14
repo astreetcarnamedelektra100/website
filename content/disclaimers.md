@@ -5,7 +5,7 @@ draft: false
 **By copying, downloading, or using any material from this Website, you agree to this notice. If you do not agree, do not copy or use the material.**
 
 ## Copyright Notice
-This copyright notice applies to the website at (INSERT) (the 'Website'), which is owned and operated by Sachin Dubey. 
+This copyright notice applies to the website at https://astreetcarnamedelektra100.github.io/website/ (the 'Website'), which is owned and operated by Sachin Dubey. 
 
 **1. Ownership of Copyright**
 
